@@ -53,10 +53,10 @@
       </el-table-column>
     </el-table>
     <div class="show-d">
-      <el-tag>The default order :</el-tag> {{ oldList }}
+      <el-tag type="success">默认排序 :</el-tag> {{ oldList }}
     </div>
     <div class="show-d">
-      <el-tag>The after dragging order :</el-tag> {{ newList }}
+      <el-tag type="success">推拽后的排序 :</el-tag> {{ newList }}
     </div>
   </div>
 </template>
@@ -79,7 +79,7 @@ export default {
   },
   data () {
     return {
-      list: null,
+      list: [],
       total: null,
       listLoading: true,
       listQuery: {

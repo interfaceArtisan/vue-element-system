@@ -12,7 +12,7 @@ export default {
 
 <style lang="scss" scoped>
 #app {
-  height: 100%;
+  // height: 100%;
   background-color: rgba(0, 0, 0, 0.03);
 }
 </style>

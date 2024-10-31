@@ -91,20 +91,7 @@ export const constantRoutes = [
         path: 'index',
         component: () => import('@/views/dashboard2/index'),
         name: 'Dashboard2',
-        meta: { title: 'Dashboard2', icon: 'dashboard', affix: true }
-      }
-    ]
-  },
-  {
-    path: '/guide',
-    component: Layout,
-    redirect: '/guide/index',
-    children: [
-      {
-        path: 'index',
-        component: () => import('@/views/guide/index'),
-        name: 'Guide',
-        meta: { title: 'Guide', icon: 'guide', noCache: true }
+        meta: { title: 'Dashboard2', icon: 'dashboard' }
       }
     ]
   },
@@ -191,31 +178,31 @@ export const asyncRoutes = [
   tableRouter,
 
   {
-    path: '/example',
+    path: '/article',
     component: Layout,
-    redirect: '/example/list',
-    name: 'Example',
+    redirect: '/article/list',
+    name: 'Article',
     meta: {
-      title: 'Example',
+      title: 'Article',
       icon: 'el-icon-s-help'
     },
     children: [
       {
         path: 'create',
-        component: () => import('@/views/example/create'),
+        component: () => import('@/views/article/create'),
         name: 'CreateArticle',
         meta: { title: 'Create Article', icon: 'edit' }
       },
       {
         path: 'edit/:id(\\d+)',
-        component: () => import('@/views/example/edit'),
+        component: () => import('@/views/article/edit'),
         name: 'EditArticle',
-        meta: { title: 'Edit Article', noCache: true, activeMenu: '/example/list' },
+        meta: { title: 'Edit Article', noCache: true, activeMenu: '/article/list' },
         hidden: true
       },
       {
         path: 'list',
-        component: () => import('@/views/example/list'),
+        component: () => import('@/views/article/list'),
         name: 'ArticleList',
         meta: { title: 'Article List', icon: 'list' }
       }
@@ -372,16 +359,6 @@ export const asyncRoutes = [
     ]
   },
 
-  {
-    path: 'external-link',
-    component: Layout,
-    children: [
-      {
-        path: 'https://github.com/PanJiaChen/vue-element-admin',
-        meta: { title: 'External Link', icon: 'link' }
-      }
-    ]
-  },
 
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }

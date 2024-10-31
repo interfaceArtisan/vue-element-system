@@ -7,33 +7,28 @@
         </div>
         <div style="margin-bottom:50px;">
           <el-col :span="4" class="text-center">
-            <router-link class="pan-btn blue-btn" to="/documentation/index">
-              Documentation
-            </router-link>
-          </el-col>
-          <el-col :span="4" class="text-center">
             <router-link class="pan-btn light-blue-btn" to="/icon/index">
-              Icons
+              图标
             </router-link>
           </el-col>
           <el-col :span="4" class="text-center">
             <router-link class="pan-btn pink-btn" to="/excel/export-excel">
-              Excel
+              导出表格
             </router-link>
           </el-col>
           <el-col :span="4" class="text-center">
             <router-link class="pan-btn green-btn" to="/table/complex-table">
-              Table
+              负责表格
             </router-link>
           </el-col>
           <el-col :span="4" class="text-center">
-            <router-link class="pan-btn tiffany-btn" to="/example/create">
-              Form
+            <router-link class="pan-btn tiffany-btn" to="/article/edit">
+              发布文章
             </router-link>
           </el-col>
           <el-col :span="4" class="text-center">
             <router-link class="pan-btn yellow-btn" to="/theme/index">
-              Theme
+              切换主题
             </router-link>
           </el-col>
         </div>

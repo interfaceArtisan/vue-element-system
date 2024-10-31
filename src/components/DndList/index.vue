@@ -1,6 +1,6 @@
 <template>
-  <div class="dndList">
-    <div :style="{width:width1}" class="dndList-list">
+  <div class="container">
+    <div :style="{width:width1}" class="container-list">
       <h3>{{ list1Title }}</h3>
       <draggable :set-data="setData" :list="list1" group="article" class="dragArea">
         <div v-for="element in list1" :key="element.id" class="list-complete-item">
@@ -15,7 +15,7 @@
         </div>
       </draggable>
     </div>
-    <div :style="{width:width2}" class="dndList-list">
+    <div :style="{width:width2}" class="container-list">
       <h3>{{ list2Title }}</h3>
       <draggable :list="list2" group="article" class="dragArea">
         <div v-for="element in list2" :key="element.id" class="list-complete-item">
@@ -72,25 +72,17 @@ export default {
       return this.list2.every(k => v.id !== k.id)
     },
     deleteEle (ele) {
-      for (const item of this.list1) {
-        if (item.id === ele.id) {
-          const index = this.list1.indexOf(item)
-          this.list1.splice(index, 1)
-          break
-        }
-      }
+      const index = this.list1.indexOf(ele)
+      this.list1.splice(index, 1)
+
       if (this.isNotInList2(ele)) {
         this.list2.unshift(ele)
       }
     },
     pushEle (ele) {
-      for (const item of this.list2) {
-        if (item.id === ele.id) {
-          const index = this.list2.indexOf(item)
-          this.list2.splice(index, 1)
-          break
-        }
-      }
+      const index = this.list2.indexOf(ele)
+      this.list2.splice(index, 1)
+
       if (this.isNotInList1(ele)) {
         this.list1.push(ele)
       }
@@ -105,7 +97,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.dndList {
+.container {
   background: #fff;
   padding-bottom: 40px;
   &:after {
@@ -113,7 +105,7 @@ export default {
     display: table;
     clear: both;
   }
-  .dndList-list {
+  .container-list {
     float: left;
     padding-bottom: 30px;
     &:first-of-type {

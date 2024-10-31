@@ -14,7 +14,7 @@ import App from "./App";
 import store from "./store";
 import router from "./router";
 
-import "./utils/flexible.js";
+import "./utils/flexible.js"; // 响应式适配
 import "./icons"; // icon
 import "./permission"; // permission control
 import "./utils/error-log"; // error log

@@ -3,10 +3,7 @@ const path = require('path')
 module.exports = defineConfig({
   devServer: {
     client: {
-      overlay: {
-        warnings: false, //不显示警告
-        errors: false	//不显示错误
-      }
+      overlay: false
     },
     setupMiddlewares: require('./mock/mock-server.js')
   },

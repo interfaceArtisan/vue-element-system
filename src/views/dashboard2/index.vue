@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <header class="header">
-      <h1>可视化展板-ECharts</h1>
+      <h1>响应式可视化展板-ECharts</h1>
       <div class="show-time">当前时间：{{ time }}</div>
     </header>
     <div class="main-box">
