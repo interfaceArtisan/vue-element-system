@@ -254,10 +254,8 @@ $dark_gray:#889aa4;
 $light_gray:#eee;
 
 .login-container {
-  min-height: 100%;
-  width: 100%;
+  height: 100vh;
   background-color: $bg;
-  overflow: hidden;
 
   .login-form {
     position: relative;
