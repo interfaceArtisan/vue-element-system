@@ -10,6 +10,8 @@ module.exports = defineConfig({
   lintOnSave: false, //关闭eslint检查
   transpileDependencies: true,
   configureWebpack: {
+    base: '/vue-element-system/',
+
     // provide the app's title in webpack's name field, so that
     // it can be accessed in index.html to inject the correct title.
     resolve: {
