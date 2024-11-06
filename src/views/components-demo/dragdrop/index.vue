@@ -20,6 +20,11 @@
       <ComplexDragDrop />
     </div>
 
+    <div class="container">
+      <div class="desc">通过el-upload实现，文件拖拽上传</div>
+      <DropZone />
+    </div>
+
     <el-tooltip placement="top" content="返顶">
       <back-to-top :custom-style="myBackToTopStyle" :visibility-height="300" :back-position="50" transition-name="fade" />
     </el-tooltip>
@@ -32,10 +37,11 @@ import DragDialog from "./drag-dialog";
 import DragKanBan from "./drag-kanban";
 import ComplexDragDrop from "./complex-drag-drop";
 import BackToTop from '@/components/BackToTop'
+import DropZone from './drop-zone'
 
 export default {
   name: "DragDrop",
-  components: { DragSelect, DragDialog, DragKanBan, ComplexDragDrop, BackToTop },
+  components: { DragSelect, DragDialog, DragKanBan, ComplexDragDrop, BackToTop, DropZone },
   data() {
     return {
       myBackToTopStyle: {
