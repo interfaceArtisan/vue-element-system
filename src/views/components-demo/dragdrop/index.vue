@@ -22,7 +22,7 @@
 
     <div class="container">
       <div class="desc">通过el-upload实现，文件拖拽上传</div>
-      <DropZone />
+      <UploadFile />
     </div>
 
     <el-tooltip placement="top" content="返顶">
@@ -37,11 +37,11 @@ import DragDialog from "./drag-dialog";
 import DragKanBan from "./drag-kanban";
 import ComplexDragDrop from "./complex-drag-drop";
 import BackToTop from '@/components/BackToTop'
-import DropZone from './drop-zone'
+import UploadFile from './upload-file'
 
 export default {
   name: "DragDrop",
-  components: { DragSelect, DragDialog, DragKanBan, ComplexDragDrop, BackToTop, DropZone },
+  components: { DragSelect, DragDialog, DragKanBan, ComplexDragDrop, BackToTop, UploadFile },
   data() {
     return {
       myBackToTopStyle: {

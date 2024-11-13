@@ -80,6 +80,7 @@ export default {
       }));
     },
     handleSuccess(response, file, fileList) {
+      // 文件上传成功后，图片墙相对应的文件又上角会出现绿色的对勾
       // 处理上传成功后的逻辑
       // console.log("上传成功", response, file, fileList);
       // this.successFileList.push({
