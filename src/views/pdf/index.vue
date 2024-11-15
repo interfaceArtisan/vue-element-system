@@ -44,7 +44,7 @@ export default {
     loadPdf() {
       this.loading = true;
 
-      const pdfUrl = "/1.pdf"; //具体路径由自身项目决定，另外这可能会涉及跨域问题可参照官网解决
+      const pdfUrl = process.env.NODE_ENV === "production" ? "/vue-element-system/1.pdf" : "/1.pdf"; //具体路径由自身项目决定，另外这可能会涉及跨域问题可参照官网解决
       const UNITS = 1.75;
       const scale = 1.5;
       // 第 3 步：使用 PDFJS.getDocument（） 处理 pdf 文档
