@@ -77,7 +77,13 @@ const componentsRouter = {
       component: () => import('@/views/components-demo/dragdrop/index'),
       name: 'DragDropDemo',
       meta: { title: 'Drag Drop' }
-    }
+    },
+    {
+      path: '/tab',
+      component: () => import('@/views/components-demo/tab/index'),
+      name: 'Tab',
+      meta: { title: 'Tab'}
+    },
   ]
 }
 

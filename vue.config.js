@@ -50,12 +50,12 @@ module.exports = defineConfig({
       .rule("svg")
       .exclude.add(path.resolve(__dirname, "src/icons/svg"))
       .end();
-    config.module
-      .rule("worker")
-      .test(/\.worker\.mjs$/)
-      .use("worker-loader")
-      .loader("worker-loader")
-      .end();
+    // config.module
+    //   .rule("worker")
+    //   .test(/\.worker\.mjs$/)
+    //   .use("worker-loader")
+    //   .loader("worker-loader")
+    //   .end();
     config.module
       .rule("icons")
       .test(/\.svg$/)

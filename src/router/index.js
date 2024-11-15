@@ -183,7 +183,7 @@ export const asyncRoutes = [
     redirect: '/article/list',
     name: 'Article',
     meta: {
-      title: 'Article',
+      title: '文章',
       icon: 'el-icon-s-help'
     },
     children: [
@@ -191,33 +191,20 @@ export const asyncRoutes = [
         path: 'create',
         component: () => import('@/views/article/create'),
         name: 'CreateArticle',
-        meta: { title: 'Create Article', icon: 'edit' }
+        meta: { title: '发布文章', icon: 'edit' }
       },
       {
         path: 'edit/:id(\\d+)',
         component: () => import('@/views/article/edit'),
         name: 'EditArticle',
-        meta: { title: 'Edit Article', noCache: true, activeMenu: '/article/list' },
+        meta: { title: '编辑文章', noCache: true, activeMenu: '/article/list' },
         hidden: true
       },
       {
         path: 'list',
         component: () => import('@/views/article/list'),
         name: 'ArticleList',
-        meta: { title: 'Article List', icon: 'list' }
-      }
-    ]
-  },
-
-  {
-    path: '/tab',
-    component: Layout,
-    children: [
-      {
-        path: 'index',
-        component: () => import('@/views/tab/index'),
-        name: 'Tab',
-        meta: { title: 'Tab', icon: 'tab' }
+        meta: { title: '文章列表', icon: 'list' }
       }
     ]
   },
@@ -346,18 +333,18 @@ export const asyncRoutes = [
     ]
   },
 
-  {
-    path: '/clipboard',
-    component: Layout,
-    children: [
-      {
-        path: 'index',
-        component: () => import('@/views/clipboard/index'),
-        name: 'ClipboardDemo',
-        meta: { title: 'Clipboard', icon: 'clipboard' }
-      }
-    ]
-  },
+  // {
+  //   path: '/clipboard',
+  //   component: Layout,
+  //   children: [
+  //     {
+  //       path: 'index',
+  //       component: () => import('@/views/clipboard/index'),
+  //       name: 'ClipboardDemo',
+  //       meta: { title: 'Clipboard', icon: 'clipboard' }
+  //     }
+  //   ]
+  // },
 
 
   // 404 page must be placed at the end !!!
