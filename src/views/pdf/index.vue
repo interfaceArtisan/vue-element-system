@@ -13,11 +13,25 @@
 </template>
 
 <script>
+/**
+ * 两种方式使用pdfjs-dist
+ * 方式一：
+ * import * as pdfjsLib from "pdfjs-dist/build/pdf";
+ * pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.mjs`;
+ *
+ * 方式二：
+ * import('pdfjs-dist/build/pdf.worker.mjs')
+ * import * as pdfjsLib from "pdfjs-dist/build/pdf";
+ *
+ * 方式一，控制台不会报错，但是在调用pdfjsLib的接口时，worker文件从cdn下载，如果下载失败，无法正常加载，如果网速过慢，也会影响文件下载进而影响解析速度
+ * 方式二：控制台会报setting up fake worker的warning，参考：https://github.com/mozilla/pdf.js/issues/10478
+ */
 import * as pdfjsLib from "pdfjs-dist/build/pdf";
+import('pdfjs-dist/build/pdf.worker.mjs')
 
-// https://github.com/mozilla/pdf.js/issues/10478，如果不用cdn方式设置，控制台会报setting up fake worker的warning
-pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.mjs`;
+// pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.mjs`;
 
+// 关于清晰度：https://mescalchuan.github.io/2021/03/25/2021-03-25-technology-pdf-img/ 和 https://blog.csdn.net/qq_45351419/article/details/113882420
 export default {
   name: "Pdf",
   data() {
